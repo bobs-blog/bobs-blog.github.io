@@ -154,7 +154,7 @@ paginate_path: "/page/:num"
 # For Netlify: Update this to your Netlify site URL (e.g., "https://your-site-name.netlify.app")
 # or use environment variable NETLIFY_URL in Netlify dashboard
 baseurl: ""
-url: "https://ubbyboi-tech.github.io" # Update this to your Netlify URL after deployment
+url: "bobs-blog.netlify.app" # Update this to your Netlify URL after deployment
 
 # ------------ The following options are not recommended to be modified ------------------
 
