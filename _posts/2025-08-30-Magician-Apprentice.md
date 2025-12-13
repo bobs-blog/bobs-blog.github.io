@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Magician: Apprentice - Raymond E. Feist"
-date: 2025-07-24 12:00:00 +0300
+date: 2025-08-30 12:00:00 +0300
 categories:
   - Fantasy
   - Fiction

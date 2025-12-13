@@ -59,6 +59,3 @@ finished it feeling like i got spiritually jumped by a dead woman from georgia w
 and honestly?
 
 respect.
-
-
-[![H.G Wells](/assets/image/wells.jpg)](/assets/image/wells.jpg){:.glightbox}
