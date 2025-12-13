@@ -22,70 +22,76 @@
 />
 <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" />
 
-<!-- GLightbox Fix - Prevent Navigation and Open Lightbox -->
+<!-- GLightbox CSS and JS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+<!-- GLightbox Initialization -->
 <script>
   (function () {
-    // CRITICAL: Prevent ALL navigation on .glightbox links
-    function setupGLightbox() {
-      // Remove href to prevent navigation, store it in data attribute instead
+    let glightboxInstance = null;
+
+    function initGLightbox() {
+      // Check if GLightbox is loaded
+      if (typeof GLightbox === "undefined") {
+        setTimeout(initGLightbox, 100);
+        return;
+      }
+
+      // Initialize GLightbox if not already done
+      if (!glightboxInstance) {
+        glightboxInstance = GLightbox({
+          selector: ".glightbox",
+          closeButton: true,
+          closeOnOutsideClick: true,
+          touchNavigation: true,
+          keyboardNavigation: true,
+          openEffect: "fade",
+          closeEffect: "fade",
+        });
+        window.glightboxInstance = glightboxInstance;
+      }
+
+      // Prevent navigation on all .glightbox links
       document.querySelectorAll("a.glightbox").forEach(function (link) {
-        const href = link.getAttribute("href");
-        if (href && !link.hasAttribute("data-glightbox-href")) {
-          link.setAttribute("data-glightbox-href", href);
-          link.setAttribute("href", "javascript:void(0)");
+        // Remove any existing click handlers by replacing the link
+        if (!link.hasAttribute("data-glightbox-setup")) {
+          link.setAttribute("data-glightbox-setup", "true");
+
+          link.addEventListener(
+            "click",
+            function (e) {
+              e.preventDefault();
+              e.stopPropagation();
+              e.stopImmediatePropagation();
+
+              const href = link.getAttribute("href");
+              if (href && glightboxInstance) {
+                glightboxInstance.open(href);
+              }
+
+              return false;
+            },
+            true
+          ); // Capture phase
         }
       });
-
-      // Global click handler - MUST run first (capture phase)
-      document.addEventListener(
-        "click",
-        function (e) {
-          const link = e.target.closest("a.glightbox");
-          if (link) {
-            e.preventDefault();
-            e.stopPropagation();
-            e.stopImmediatePropagation();
-
-            const imageUrl =
-              link.getAttribute("data-glightbox-href") ||
-              link.getAttribute("href");
-
-            // Wait for GLightbox to be available
-            if (typeof GLightbox !== "undefined") {
-              if (!window.glightboxInstance) {
-                window.glightboxInstance = GLightbox({
-                  selector: ".glightbox",
-                  closeButton: true,
-                  closeOnOutsideClick: true,
-                  touchNavigation: true,
-                  keyboardNavigation: true,
-                });
-              }
-              if (imageUrl && imageUrl !== "javascript:void(0)") {
-                window.glightboxInstance.open(imageUrl);
-              }
-            }
-
-            return false;
-          }
-        },
-        true
-      ); // Capture phase - runs BEFORE other handlers
     }
 
-    // Run immediately
-    setupGLightbox();
-
-    // Run when DOM is ready
+    // Initialize when DOM is ready
     if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", setupGLightbox);
+      document.addEventListener("DOMContentLoaded", initGLightbox);
+    } else {
+      initGLightbox();
     }
 
-    // Run after everything loads
+    // Also try after page fully loads
     window.addEventListener("load", function () {
-      setTimeout(setupGLightbox, 50);
-      setTimeout(setupGLightbox, 200);
-      setTimeout(setupGLightbox, 500);
+      setTimeout(initGLightbox, 100);
+      setTimeout(initGLightbox, 500);
     });
   })();
 </script>
