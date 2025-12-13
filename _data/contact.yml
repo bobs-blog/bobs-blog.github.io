@@ -2,11 +2,11 @@
 
 - type: instagram
   icon: "fab fa-instagram"
-  url: "" # Fill with your Instagram profile link
+  url: "https://www.instagram.com/_itzubby"
 
 - type: reddit
   icon: "fa-brands fa-reddit"
-  url: "" # Fill with your Reddit profile link
+  url: "https://www.reddit.com/user/_ubby"
 
 - type: email
   icon: "fas fa-envelope"
