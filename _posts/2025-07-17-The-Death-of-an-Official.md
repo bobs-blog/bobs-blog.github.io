@@ -11,7 +11,7 @@ categories:
 **Anton Chekhov** (1860–1904) was a Russian playwright and short story master, known for his subtle, layered portraits of ordinary people caught in the quiet absurdities of life. A doctor by profession, Chekhov brought a clinical eye to his characters — not to judge them, but to reveal the fragile contradictions they carry. His stories often feel simple at first glance, but they unravel into moments of quiet tragedy, awkward comedy, and aching humanity.
 
 
-[![Anton Chekhov](/assets/image/anton.jpeg)](/assets/image/anton.jpg){:.glightbox}
+[![Anton Chekhov](/assets/image/anton.jpeg)](/assets/image/anton.jpeg){:.glightbox}
 
 
 It’s funny — just a sneeze. That’s how it starts.

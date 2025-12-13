@@ -17,7 +17,7 @@ His prose can be dense and atmospheric, but beneath the surface lies a relentles
 
 
 
-[![Joseph Conrad](/assets/image/conrad.jpg)](/assets/image/conrad.jpg){:.glightbox}
+[![Joseph Conrad](/assets/image/Conrad.jpg)](/assets/image/Conrad.jpg){:.glightbox}
 
 > First off, let’s get this straight: _Heart of Darkness_ is one of those classics you pretty much have to read if you want to call yourself well-read.
 
