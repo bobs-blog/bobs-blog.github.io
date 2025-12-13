@@ -26,6 +26,53 @@
 <script>
   (function () {
     let glightboxInstance = null;
+    let isInitialized = false;
+
+    // Aggressively prevent navigation on .glightbox links
+    function preventNavigation() {
+      // Find all .glightbox links and prevent default behavior
+      const glightboxLinks = document.querySelectorAll("a.glightbox");
+      glightboxLinks.forEach(function (link) {
+        // Remove existing event listeners by cloning
+        const newLink = link.cloneNode(true);
+        link.parentNode.replaceChild(newLink, link);
+
+        // Add click handler that prevents navigation
+        newLink.addEventListener(
+          "click",
+          function (e) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+
+            // Initialize GLightbox if needed
+            if (!isInitialized && typeof GLightbox !== "undefined") {
+              if (!glightboxInstance) {
+                glightboxInstance = GLightbox({
+                  selector: ".glightbox",
+                  closeButton: true,
+                  closeOnOutsideClick: true,
+                  touchNavigation: true,
+                  keyboardNavigation: true,
+                });
+                window.glightboxInstance = glightboxInstance;
+              }
+              isInitialized = true;
+            }
+
+            // Open the image
+            if (glightboxInstance) {
+              const href = newLink.getAttribute("href");
+              if (href) {
+                glightboxInstance.open(href);
+              }
+            }
+
+            return false;
+          },
+          true
+        ); // Use capture phase
+      });
+    }
 
     function initGLightbox() {
       // Check if GLightbox library is available
@@ -35,41 +82,10 @@
         return;
       }
 
-      // Prevent default link behavior for .glightbox links
-      document.addEventListener(
-        "click",
-        function (e) {
-          const link = e.target.closest("a.glightbox");
-          if (link) {
-            e.preventDefault();
-            e.stopPropagation();
+      // Prevent navigation immediately
+      preventNavigation();
 
-            // Initialize GLightbox if not already done
-            if (!glightboxInstance) {
-              glightboxInstance = GLightbox({
-                selector: ".glightbox",
-                closeButton: true,
-                closeOnOutsideClick: true,
-                touchNavigation: true,
-                keyboardNavigation: true,
-                openEffect: "fade",
-                closeEffect: "fade",
-              });
-              window.glightboxInstance = glightboxInstance;
-            }
-
-            // Open the clicked image
-            const href = link.getAttribute("href");
-            if (href) {
-              glightboxInstance.open(href);
-            }
-            return false;
-          }
-        },
-        true
-      ); // Use capture phase
-
-      // Initialize GLightbox for all .glightbox links
+      // Initialize GLightbox if not already done
       if (!glightboxInstance) {
         glightboxInstance = GLightbox({
           selector: ".glightbox",
@@ -77,11 +93,31 @@
           closeOnOutsideClick: true,
           touchNavigation: true,
           keyboardNavigation: true,
-          openEffect: "fade",
-          closeEffect: "fade",
         });
         window.glightboxInstance = glightboxInstance;
+        isInitialized = true;
       }
+
+      // Also add a global click handler as backup
+      document.addEventListener(
+        "click",
+        function (e) {
+          const link = e.target.closest("a.glightbox");
+          if (link) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+
+            if (glightboxInstance) {
+              const href = link.getAttribute("href");
+              if (href) {
+                glightboxInstance.open(href);
+              }
+            }
+            return false;
+          }
+        },
+        true
+      ); // Use capture phase
 
       // Fix close functionality
       fixGLightboxClose();
@@ -157,17 +193,34 @@
       });
     }
 
+    // Start preventing navigation immediately
+    preventNavigation();
+
     // Initialize when DOM is ready
     if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", initGLightbox);
+      document.addEventListener("DOMContentLoaded", function () {
+        preventNavigation();
+        initGLightbox();
+      });
     } else {
+      preventNavigation();
       initGLightbox();
     }
 
     // Also try after page load
     window.addEventListener("load", function () {
-      setTimeout(initGLightbox, 100);
-      setTimeout(initGLightbox, 500);
+      setTimeout(function () {
+        preventNavigation();
+        initGLightbox();
+      }, 100);
+      setTimeout(function () {
+        preventNavigation();
+        initGLightbox();
+      }, 500);
+      setTimeout(function () {
+        preventNavigation();
+        initGLightbox();
+      }, 1000);
     });
   })();
 </script>
