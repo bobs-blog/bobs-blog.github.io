@@ -1,0 +1,13 @@
+[build]
+  command = "bundle exec jekyll build"
+  publish = "_site"
+
+[build.environment]
+  RUBY_VERSION = "3.3"
+  JEKYLL_ENV = "production"
+
+# Redirect rules for Jekyll (optional, but recommended)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
