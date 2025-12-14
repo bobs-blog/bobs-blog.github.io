@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Big Boy Leaves Home — Richard Wright
+title: "Big Boy Leaves Home - Richard Wright"
 date: 2025-09-16 12:00:00 +0300
 categories:
   - Short Story
