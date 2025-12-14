@@ -1,0 +1,178 @@
+{
+  "main": {
+    "id": "e348ce07c07c9611",
+    "type": "split",
+    "children": [
+      {
+        "id": "1d85507441836d10",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a3eacaf1af70cbc9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_posts/2025-09-16-Big-Boy-Leaves-Home.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2025-09-16-Big-Boy-Leaves-Home"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7c8d118e2f44e715",
+    "type": "split",
+    "children": [
+      {
+        "id": "85e7e917b540d6fb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b6fce4dd41f8ea16",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "74830f160dfdedb5",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "912acfa2d6c447c2",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "8ee815d57dd3f335",
+    "type": "split",
+    "children": [
+      {
+        "id": "cf05d473af29eb59",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f52e2cf9786fc34a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "_posts/2025-09-16-Big-Boy-Leaves-Home.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 2025-09-16-Big-Boy-Leaves-Home"
+            }
+          },
+          {
+            "id": "6e792280923357ae",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "_posts/2025-09-16-Big-Boy-Leaves-Home.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 2025-09-16-Big-Boy-Leaves-Home"
+            }
+          },
+          {
+            "id": "2a36046f68ff6091",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "1abb0b55f38d0a8b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "_posts/2025-09-16-Big-Boy-Leaves-Home.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 2025-09-16-Big-Boy-Leaves-Home"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "a3eacaf1af70cbc9",
+  "lastOpenFiles": [
+    "_posts/2025-09-16-Revelation.md",
+    "assets/image/richard.jpeg",
+    "_posts/2025-09-16-Big-Boy-Leaves-Home.md"
+  ]
+}

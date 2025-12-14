@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Revelation — Flannery O’Connor"
+title: Revelation — Flannery O’Connor
 date: 2025-09-16 12:00:00 +0300
 categories:
   - Short Story
-  - Psychological Fiction
+  - Southern Gothic
   - Classics
   - Literary Fiction
 ---
