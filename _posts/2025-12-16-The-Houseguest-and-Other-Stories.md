@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The Houseguest — Amparo Dávila
+title: The Houseguest and other stories — Amparo Dávila
 date: 2025-12-16 12:00:00 +0300
 categories:
   - Short Fiction
