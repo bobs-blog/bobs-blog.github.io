@@ -43,6 +43,8 @@ The story doesn’t comfort us. It doesn’t moralize. It traps you inside a min
 
 
 [![“I think, therefore I am, but I do not live.”](/assets/image/ithink.jpg)](/assets/image/ithink.jpg){:.glightbox}
+                                   ## What Did She Wish For?
+
 
 What stayed with me after finishing the story isn’t a specific scene or act of violence. It’s a question that keeps resurfacing, one we keep pretending is hypothetical. Would we really be surprised if a machine took over? Not shocked, not horrified in some cinematic way, just quietly resigned. As if part of us already expects it. As if we’ve been rehearsing this outcome for years through fiction, theory, and late night conversations about AI that always end the same way, nervous laughter, vague unease, then silence.
 
