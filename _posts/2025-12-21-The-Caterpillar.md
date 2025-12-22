@@ -19,8 +19,6 @@ categories:
 
 I have come across **Edogawa** a while back and was reading _The Human Chair_, but I haven’t finished it yet. Then right now I stumbled upon _The Caterpillar_, but definitely I’m going to reread _The Human Chair_ next.
 
-You are already there. That sentence gets me every time.
-
 It left me disturbed, but in a way that felt strangely satisfying. Not relief, not pleasure, more like the satisfaction of sitting with something that refuses to soften itself for you. Everything collapses together in this story, the body, the mind, desire, cruelty. Imagine having your free will stripped away and then being slowly destroyed by someone you love. That’s the core of it, and it never loosens its grip.
 
 This story concerns a woman whose husband returns from war with such serious injuries that she must constantly care for him as he has lost all of his limbs and the ability to talk. There is a strong horror component to this story and not much in the way of mystery, although it is certainly imaginative and contains some very strong imagery.
