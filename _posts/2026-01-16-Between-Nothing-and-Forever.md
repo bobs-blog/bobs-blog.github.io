@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Between Nothing and Forever
-date: 2026-01-11 12:00:00 +0300
+date: 2026-01-16 12:00:00 +0300
 categories:
   - Existential Inquiry
   - Spiritual/Religious Reflection
