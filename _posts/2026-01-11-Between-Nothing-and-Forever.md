@@ -11,7 +11,7 @@ categories:
 
 ## Between Nothing and Forever
 
-What happens after we die, is it blackness, like before I was born, or some form of eternal existence? The idea of nothingness terrifies me — the same nothing I experienced before I existed.
+What happens after we die, is it blackness, like before I was born, or some form of eternal existence? The idea of nothingness terrifies me or the same nothing I experienced before I existed.
 
 ---
 ## Happiness and Eternity
