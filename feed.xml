@@ -17,13 +17,12 @@ layout: null
       <guid>{{ site.url }}{{ post.url }}</guid>
       <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
 
-      <!-- FULL CONTENT IN BOTH DESCRIPTION AND CONTENT -->
       <description><![CDATA[
-{{ post.content | markdownify }}
+{{ post.content }}
       ]]></description>
 
       <content:encoded><![CDATA[
-{{ post.content | markdownify }}
+{{ post.content }}
       ]]></content:encoded>
 
     </item>
