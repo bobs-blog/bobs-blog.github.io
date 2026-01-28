@@ -2,30 +2,28 @@
 layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0"
-  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ site.lang | default: 'en' }}">
+  <generator uri="https://jekyllrb.com/" version="{{ jekyll.version }}">Jekyll</generator>
+  <link href="{{ site.url }}/full.xml" rel="self" type="application/atom+xml"/>
+  <link href="{{ site.url }}/" rel="alternate" type="text/html" hreflang="{{ site.lang | default: 'en' }}"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>{{ site.url }}/</id>
+  <title>{{ site.title }}</title>
+  <subtitle>{{ site.description }}</subtitle>
 
-  <channel>
-    <title>{{ site.title }}</title>
-    <link>{{ site.url }}</link>
-    <description>{{ site.description }}</description>
+  {% assign feed_author = site.social.name | default: site.title %}
 
-    {% for post in site.posts %}
-    <item>
-      <title>{{ post.title }}</title>
-      <link>{{ site.url }}{{ post.url }}</link>
-      <guid>{{ site.url }}{{ post.url }}</guid>
-      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-
-      <description><![CDATA[
-{{ post.content }}
-      ]]></description>
-
-      <content:encoded><![CDATA[
-{{ post.content }}
-      ]]></content:encoded>
-
-    </item>
-    {% endfor %}
-  </channel>
-</rss>
+  {% for post in site.posts %}
+  <entry>
+    <title>{{ post.title }}</title>
+    <link href="{{ site.url }}{{ post.url }}" rel="alternate" type="text/html" title="{{ post.title }}"/>
+    <published>{{ post.date | date_to_xmlschema }}</published>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <id>{{ site.url }}{{ post.url }}</id>
+    <author>
+      <name>{{ post.author | default: feed_author }}</name>
+    </author>
+    <content type="html">{{ post.content | xml_escape }}</content>
+  </entry>
+  {% endfor %}
+</feed>
