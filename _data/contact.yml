@@ -14,7 +14,7 @@
 
 - type: rss
   icon: "fas fa-rss"
-  url: "/rss.xml"
+  url: "https://bobs-blog.github.io/full.xml"
   noblank: true
 # Uncomment and complete the url below to enable more contact options
 #
