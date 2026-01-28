@@ -8,6 +8,12 @@ plugins:
   - jekyll-seo-tag
   - jekyll-archives
 
+# jekyll-feed configuration (used by the theme internally)
+# Move its output away from /feed.xml and ensure it uses full content
+feed:
+  path: rss.xml
+  excerpt_only: false
+
 # The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
 # If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
 # otherwise, the layout language will use the default value of 'en'.

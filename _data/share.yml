@@ -14,6 +14,10 @@ platforms:
     icon: "fab fa-telegram"
     link: "https://t.me/share/url?url=URL&text=TITLE"
 
+  - type: RSS
+    icon: "fa-solid fa-rss"
+    link: "https://bobs-blog.github.io/full.xml"
+
   # Uncomment below if you need to.
   #
   # - type: Linkedin
